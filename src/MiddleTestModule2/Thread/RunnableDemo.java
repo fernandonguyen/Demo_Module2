@@ -9,8 +9,11 @@ public class RunnableDemo implements Runnable{
         System.out.println("Creating" + threadName);
     }
 
-    @Override
     public void run() {
+        print();
+    }
+
+    public void print(){
         System.out.println("Running" + threadName);
         for (int i = 4; i >0 ; i--) {
             System.out.println("Thread:" + threadName + i);
